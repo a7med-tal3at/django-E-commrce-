@@ -1,0 +1,283 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loading Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+<link rel="stylesheet" href="{% static 'css/product.css' %}" />
+<link rel="stylesheet" href="{% static 'css/team.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+<section class="categ">
+  <div class="categ-desc">
+    <div class="overlay">
+      <h2 class="active">men</h2>
+    </div>
+  </div>
+  <!-- ./categ-desc -->
+
+  <div class="categ-desc">
+    <div class="overlay">
+      <h2>women</h2>
+    </div>
+  </div>
+  <!-- ./categ-desc -->
+
+  <div class="categ-desc">
+    <div class="overlay">
+      <h2>kids</h2>
+    </div>
+  </div>
+  <!-- ./categ-desc -->
+</section>
+<!-- ./categ -->
+<section class="markting">
+  <div class="markting-content">
+    <div class="text-content">
+      <div class="content">
+        <p>the latest fashon for:</p>
+        <h2>men</h2>
+        <p class="desk-markting">
+          latest fashon from the bestest and the coolest in the world and
+          keeping up todate
+        </p>
+      </div>
+    </div>
+    <!-- ./text-content -->
+    <div class="visual-content">
+      <img src="{% static 'img/gallery/f-men.png' %}" alt="" />
+    </div>
+    <!-- ./visual-content -->
+  </div>
+  <div class="team">
+    <p class="label">the best designers in the world</p>
+    <img src="{% static 'img/gallery/team-1.jpeg' %}" alt="" />
+    <p class="team-desc">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+      dignissimos exercitationem dolore distinctio consequuntur expedita debitis
+      architecto hic modi voluptas.
+    </p>
+  </div>
+</section>
+<!-- ./markting -->
+<section class="product">
+  <div class="btn-group">
+    <ul>
+      <li><a href="#" class="active">all</a></li>
+      <li><a href="#">sports</a></li>
+      <li><a href="#">men</a></li>
+      <li><a href="#">women</a></li>
+      <li><a href="#">kids</a></li>
+    </ul>
+  </div>
+  <!-- ./btn-group -->
+  <div class="container">
+    <div class="helpper">
+      <div class="window">
+        <div class="container">
+          <div class="imgs">
+            <img
+              class="active"
+              src="{% static 'img/product/prod' %}uct-1.jpeg"
+              alt=""
+            />
+            <img src="{% static 'img/product/product-1.jpeg' %}" alt="" />
+            <img src="{% static 'img/product/product-1.jpeg' %}" alt="" />
+          </div>
+
+          <div class="slider">
+            <img src="{% static 'img/product/images.jpeg' %}" alt="" />
+            <div class="polits">
+              <span class="active polit"></span>
+              <span class="polit"></span>
+              <span class="polit"></span>
+            </div>
+          </div>
+
+          <div class="content">
+            <h3 class="title prod-name">hand watch</h3>
+            <p class="prod-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit,
+              eveniet?
+            </p>
+            <h3 class="title prod-colors">colors</h3>
+            <div class="colors">
+              <div class="cir a" color="#fff"></div>
+              <div class="cir b" color="#fff"></div>
+              <div class="cir c" color="#fff"></div>
+              <div class="cir d" color="#fff"></div>
+            </div>
+            <h2 class="title qty">qountity</h2>
+            <div class="controler">
+              <button id="plus">+</button>
+              <input type="text" value="1" />
+              <button id="minuse">-</button>
+            </div>
+            <button class="add-to-cart">add to cart</button>
+          </div>
+        </div>
+        <div class="close">
+          <div class="icon">
+            <i class="ti-close"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-parent">
+      {% for p in products %}
+
+      <div class="production">
+        <div class="cart">
+          <img src="{{p.img.url}}" alt="" />
+          <h3 class="name">{{p.prodName}}</h3>
+          <div class="pad-container">
+            <p class="prd-desc">{{p.prodDiscrption}}</p>
+            <div class="prod-bes">
+              <h2 class="price">${{p.prodPrice}}</h2>
+              <span class="offer">{{p.prodDescound}}% OFF</span>
+            </div>
+            <!-- ./prod-bes -->
+            <div class="ratting">
+              <div class="stars">
+                <span data-set="{{p.prodRate}}"></span>
+              </div>
+              <!-- ./stars -->
+              <button class="view">
+                <i class="ti-heart"></i>
+                view
+              </button>
+            </div>
+            <!-- ./ratting -->
+          </div>
+          <!-- ./pad-conatiner -->
+        </div>
+        <!-- ./cart -->
+      </div>
+
+      {% endfor %}
+      <!-- ./production -->
+    </div>
+    <!-- flex-parent -->
+  </div>
+  <!-- ./container -->
+</section>
+<!-- ./product -->
+
+<div class="container">
+  <h1 class="header">our services</h1>
+  <section class="our-serveces">
+    <div class="service-cart">
+      <img src="{% static 'img/icons/prev.png' %}" alt="" />
+      <h4 class="serv-label">Securety</h4>
+      <p class="serv-desc">
+        your securety and prevacey in our place and dont scary
+      </p>
+      <button class="l-more">learn more</button>
+    </div>
+
+    <div class="service-cart">
+      <img src="{% static 'img/icons/qualty.png' %}" alt="" />
+      <h4 class="serv-label">Very heigh quality</h4>
+      <p class="serv-desc">
+        your securety and prevacey in our place and dont scary
+      </p>
+      <button class="l-more">learn more</button>
+    </div>
+
+    <div class="service-cart">
+      <img src="{% static 'img/icons/watch-time-and-date.png' %}" alt="" />
+      <h4 class="serv-label">The Fastest</h4>
+      <p class="serv-desc">
+        your securety and prevacey in our place and dont scary
+      </p>
+      <button class="l-more">learn more</button>
+    </div>
+  </section>
+  <!-- ./service-cart -->
+</div>
+
+<section class="b-friday">
+  <div class="overlay">
+    <div class="container">
+      <img src="{% static 'img/icons/BlackFriday.jpg' %}" alt="" />
+      <div class="timer-container">
+        <ul class="timer">
+          <li class="not">
+            <h2>start</h2>
+            <div class="day">20</div>
+          </li>
+          <li>
+            <h2 class="c-days">9</h2>
+            <span>days</span>
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li>
+          <li>
+            <h2 class="c-hours">15</h2>
+            <span>hours</span>
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li>
+          <li>
+            <h2 class="c-minutes">30</h2>
+            <span>minutes</span>
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li>
+          <li>
+            <h2 class="c-seconds">00</h2>
+            <span>Seconds</span>
+          </li>
+          <li class="not">
+            <h2>end</h2>
+            <div class="day">15</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ./container -->
+  </div>
+  <!-- ./overlay -->
+</section>
+<!-- ./b-friday -->
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %}
+
+<script src="{% static 'js/product_window.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/ratting.js' %}"></script>
+
+{% endblock %}
+
+<!------ End-Scripts ------>

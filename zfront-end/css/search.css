@@ -1,0 +1,34 @@
+.flex-parent {
+  padding: 20px;
+}
+
+.search form {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.search form h1 {
+  text-transform: capitalize;
+  margin: 20px 0;
+  font-size: 50px;
+}
+
+.search form input {
+  padding: 9px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  font-size: 18px;
+  outline: 0 !important;
+}
+
+.search form button {
+  outline: 0 !important;
+  padding: 12px;
+  border: none;
+  border-radius: 19px;
+  width: 71px;
+  background-color: #890620;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}

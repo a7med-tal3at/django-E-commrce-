@@ -1,0 +1,134 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loding Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/bag_checkouts_table.css' %}" />
+<link rel="stylesheet" href="{% static 'noti/dist/notifications.css' %}">
+<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+    <section class="profile">
+      <div class="container">
+        <div class="profile-img">
+          <img class="wellp" src="{% static 'img/gallery/693150.jpg' %}" alt="" />
+          <div class="personal">
+          <img  src="{% static 'img/gallery/cat-1.jpeg' %}" alt="" />
+          </div>
+          <h3 class="name">ahmed t.mamdouh</h3>
+          <p class="bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+            enim.
+          </p>
+          <div class="profile-info">
+            <ul>
+              <li>
+                <label for="">bag</label>
+                <p class="value"><span>7</span> products</p>
+              </li>
+              <li>
+                <label for="">checkouts</label>
+                <p class="value"><span>7</span> checkout</p>
+              </li>
+              <li>
+                <label for="">last order</label>
+                <p class="value">from week ago</p>
+              </li>
+            </ul>
+          </div>
+          <a href="{% url 'edit_profile' %}" class="edit">edit profile</a>
+          <a href="{% url 'checkout' %}" class="edit">my checkouts</a>
+        </div>
+        <div class="trans">
+          <!-- <h1>aha</h1> -->
+          <div class="container">
+            <div class="bag">
+              <h2>bag</h2>
+              <table>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <th>product</th>
+                  <th>product Name</th>
+                  <th>qty</th>
+                  <th>total</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                </tr>
+              </table>
+              <div class="btn-contariner">
+                <button class="del">delete</button>
+              <button class="chk">checkout</button>
+              </div>
+            </div>
+            <!-- ./bag -->
+          </div>
+        </div>
+        <!-- ./trans -->
+      </div>
+    </section>
+    <!-- ./profile -->
+    <div class="gap"></div>
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %}
+
+<script src="{% static 'noti/dist/notifications.js' %}"></script>
+<script src="{% static 'js/checkbox_logic.js' %}"></script>
+<script src="{% static 'js/notific.js' %}"></script>
+<script src="{% static 'js/profile.js' %}"></script>
+
+{% endblock %}
+
+<!------ End-Scripts ------>

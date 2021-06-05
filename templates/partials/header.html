@@ -1,0 +1,110 @@
+<!-- Loading static -->
+
+{% load static %}
+
+<header>
+  <div class="container">
+    <nav class="icons">
+      <ul>
+        <li>
+          <div class="flag">
+            <img src="{% static 'img/icons/flag.png' %}" alt="" />
+            <div class="flags">
+              <div class="one-flag">
+                <img src="{% static 'img/icons/eg-flag.png' %}" alt="" />
+                <p>العربية</p>
+              </div>
+              <div class="one-flag">
+                <img src="{% static 'img/icons/fr-flag.png' %}" alt="" />
+                <p>français</p>
+              </div>
+              <div class="one-flag">
+                <img src="{% static 'img/icons/gr-falg.png' %}" alt="" />
+                <p>Deutsche</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="search">
+          <form action="{% url 'search' %}">
+            <input
+              type="text"
+              name="q"
+              class="ser-input"
+              placeholder="Search here"
+              required
+            />
+            <button type="submit" class="ser">
+              <i class="ti-search"></i>
+            </button>
+          </form>
+          <button type="submit" class="ser active">
+            <i class="ti-search"></i>
+          </button>
+        </li>
+        <li>
+          <div class="logo">
+            <a href="{% url 'index' %}">
+              <img src="{% static 'img/logo/logo.png' %}" alt="" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <span class="prod-conter">0</span>
+          <i class="cart ti-shopping-cart"></i>
+        </li>
+        <li class="join-us">
+          <i class="ti-user"></i>
+          <div class="u-sttinges">
+            <a href="{% url 'signup' %}">sign up</a>
+            <a href="{% url 'signin' %}">sign in</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- ./icons -->
+
+    <div class="line"></div>
+
+    <nav class="links">
+      <ul>
+        <li>
+          <a href="#">sports</a>
+        </li>
+        <li><a href="#">men</a></li>
+        <li><a href="#">women</a></li>
+        <li><a href="#">kids</a></li>
+        <li><a href="{% url 'about' %}">about</a></li>
+      </ul>
+    </nav>
+    <!-- ./links -->
+    <div class="div-container">
+      <div class="view-content">
+        <div class="description">
+          <h2 class="name">sports</h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            quos dicta quidem tenetur sunt mollitia.
+          </p>
+          <a href="{% url 'category' %}" class="view-all">view all</a>
+        </div>
+        <div class="content-img">
+          <div class="overlay">
+            <h2>clocks</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="more-img">
+          <!-- <div class="still-empty">
+                  <h2>still empty</h2>
+                </div> -->
+
+          {% for s in sm_products %}
+          <img src="{{ s.img.url }}" alt="" />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ./container -->
+</header>

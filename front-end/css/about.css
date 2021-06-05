@@ -1,0 +1,23 @@
+.about {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.about .container {
+  text-align: center;
+  /* background-color: red; */
+}
+
+.about h1 {
+  text-transform: capitalize;
+}
+
+.about img {
+  width: 175px;
+  display: block;
+  margin: 50px auto;
+}
+
+.about p {
+  color: #333;
+}

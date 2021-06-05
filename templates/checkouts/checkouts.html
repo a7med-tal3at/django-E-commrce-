@@ -1,0 +1,143 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loding Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/bag_checkouts_table.css' %}" />
+<link rel="stylesheet" href="{% static 'noti/dist/notifications.css' %}">
+<link rel="stylesheet" href="{% static 'css/checkouts.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+    <section class="profile">
+      <div class="container">
+        <div class="trans">
+          <div class="container">
+            <div class="check-outs">
+              <h2>checkouts</h2>
+              <table>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <th>product</th>
+                  <th>product Name</th>
+                  <th>qty</th>
+                  <th>total</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="select" /></td>
+                  <td><img src="{% static 'img/product/product-1.jpeg' %}" alt="" /></td>
+
+                  <td>hand watch</td>
+                  <td>1</td>
+                  <td>$100</td>
+                </tr>
+                </tr>
+              </table>
+              <div class="btn-contariner">
+                <button class="del">delete</button>
+              <button class="chk">get the order</button>
+              </div>
+            </div>
+            <!-- ./bag -->
+          </div>
+        </div>
+        <!-- ./trans -->
+      </div>
+    </section>
+    <!-- ./profile -->
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %}
+
+<script src="{% static 'noti/dist/notifications.js' %}"></script>
+<script src="{% static 'js/checkbox_logic.js' %}"></script>
+<script src="{% static 'js/checkouts.js' %}"></script>
+<script src="{% static 'js/notific.js' %}"></script>
+<!-- <script>
+    // Notifcations logic
+function notifec(theme, msg) {
+    window.createNotification({
+      closeOnClick: true,
+      displayCloseButton: true,
+      positionClass: "nfc-top-right",
+      showDuration: 3000,
+      theme: theme,
+    })({
+      title: "order status",
+      message: msg,
+    });
+  }
+  
+  function ifAllNotChecked(element) {
+    element.forEach((item) => {
+      if (item.checked) {
+        return true;
+      }
+    });
+    return false;
+  }
+
+  window.addEventListener("DOMContentLoaded", function () {
+    var chk = document.querySelector(".chk");
+    chk.addEventListener("click", function (e) {
+      e.preventDefault();
+      let bx = document.querySelectorAll("input[type=checkbox]");
+      if (bx.length == 1) {
+        notifec("error", "You has no products");
+      } else if (ifAllNotChecked(bx)) {
+        notifec("success", "Done");
+      } else {
+        notifec("error", "You haven't chosen anything yet");
+      }
+    });
+  });
+  
+</script> -->
+
+{% endblock %}
+
+<!------ End-Scripts ------>

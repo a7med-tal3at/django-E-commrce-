@@ -1,0 +1,45 @@
+header {
+  border-bottom: 1px solid #890620;
+}
+
+.suc-window {
+  padding: 20px;
+  border: 3px solid #37833b;
+  background-color: #fff;
+  text-align: center;
+  color: #37833b;
+}
+
+.profile .trans .check-outs button {
+  background: none;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin: 30px;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-contariner {
+  text-align: center;
+}
+
+.profile .trans .check-outs button.del {
+  border-color: #fbc2c2;
+  color: #da3d3d;
+}
+
+.profile .trans .check-outs button.chk {
+  border-color: #bbe2bf;
+  color: #37833b;
+}
+
+.profile .trans .check-outs button.chk:hover {
+  border-color: #37833b;
+}
+
+.profile .trans .check-outs button.del:hover {
+  border-color: #da3d3d;
+}

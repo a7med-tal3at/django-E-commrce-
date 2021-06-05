@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .window {
+        padding: 30px;
+      }
+
+      .window .container {
+        display: flex;
+      }
+
+      .window .imgs {
+        flex: 1;
+      }
+
+      .window .imgs .active {
+        border: 3px solid #890620;
+        padding: 5px;
+      }
+
+      .window .imgs img {
+        display: block;
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      .window .slider {
+        flex: 2;
+      }
+
+      .window .slider img {
+        width: 100%;
+      }
+
+      .window .slider .polits .active {
+        background-color: rgb(146, 146, 146);
+      }
+
+      .window .slider .polits {
+        display: flex;
+        width: 60px;
+        justify-content: space-between;
+        margin: auto;
+        padding: 20px 0;
+      }
+
+      .window .slider .polit {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #890620;
+        cursor: pointer;
+      }
+
+      .window .content {
+        flex: 1;
+      }
+
+      .window .content .title {
+        text-transform: capitalize;
+        margin-bottom: 30px;
+      }
+
+      .window .content .prod-desc {
+        line-height: 25px;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .window .content .colors {
+        display: flex;
+        margin-bottom: 30px;
+      }
+
+      .window .content .colors .cir {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .window .content .colors .a {
+        background: #ccc;
+      }
+      .window .content .colors .b {
+        background: #890620;
+        transform: translate(-15px);
+      }
+      .window .content .colors .c {
+        background: #333;
+        transform: translate(-30px);
+      }
+      .window .content .colors .d {
+        background: #000;
+        transform: translate(-45px);
+      }
+
+      .window .content .controler {
+        margin-bottom: 30px;
+      }
+
+      .window .content .controler button {
+        padding: 10px;
+        background: none;
+        border: 1px solid #333;
+        cursor: pointer;
+      }
+
+      .window .content .controler button#plus {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      .window .content .controler button#minuse {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      .window .content .controler input {
+        width: 60px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .window .content .add-to-cart {
+        display: block;
+        padding: 10px;
+        font-weight: bold;
+        text-transform: capitalize;
+        background: none;
+        border: 1px solid #890620;
+        color: #890620;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+      }
+
+      .window .content .add-to-cart:hover {
+        background: #890620;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

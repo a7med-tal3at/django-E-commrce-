@@ -1,0 +1,50 @@
+<!-- Loading Static -->
+
+{% load static %}
+
+<footer class="dark">
+  <div class="container">
+    <div class="sotial">
+      <img src="{% static 'img/logo/logo.png' %}" alt="" />
+      <div class="sotial-desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum numquam
+        voluptatibus aspernatur,
+      </div>
+      <div class="sotial-icons">
+        <div class="grad">
+          <i class="ti-facebook"></i>
+        </div>
+        <div class="grad">
+          <i class="ti-twitter-alt"></i>
+        </div>
+        <div class="grad">
+          <i class="ti-instagram"></i>
+        </div>
+        <div class="grad">
+          <i class="ti-dribbble"></i>
+        </div>
+        <div class="grad">
+          <i class="ti-linkedin"></i>
+        </div>
+      </div>
+    </div>
+    <div class="category-items">
+      <h2>categorys</h2>
+      <ul>
+        <li><a class="a-links" href="#">sports</a></li>
+        <li><a class="a-links" href="#">men</a></li>
+        <li><a class="a-links" href="#">women</a></li>
+        <li><a class="a-links" href="#">kids</a></li>
+      </ul>
+    </div>
+    <div class="pages">
+      <h2>pages</h2>
+      <ul>
+        <li><a class="a-links" href="{% url 'index' %}">home</a></li>
+        <li><a class="a-links" href="{% url 'about' %}">about-us</a></li>
+        <li><a class="a-links" href="{% url 'category' %}">category</a></li>
+        <li><a class="a-links" href="#">team</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

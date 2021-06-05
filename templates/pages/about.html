@@ -1,0 +1,72 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loading Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+<div class="about">
+  <div class="container">
+    <img src="{% static 'img/logo/logo.png' %}" alt="" />
+    <p>An emerging company in the field of electronic commerce for</p>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="header">our services</h1>
+  <section class="our-serveces">
+    <div class="service-cart">
+      <img src="{% static 'img/icons/prev.png' %}" alt="" />
+      <h4 class="serv-label">Securety</h4>
+      <p class="serv-desc">
+        your securety and prevacey in our place and dont scary
+      </p>
+      <button class="l-more">learn more</button>
+    </div>
+
+    <div class="service-cart">
+      <img src="{% static 'img/icons/qualty.png' %}" alt="" />
+      <h4 class="serv-label">Very heigh quality</h4>
+      <p class="serv-desc">
+        your securety and prevacey in our place and dont scary
+      </p>
+      <button class="l-more">learn more</button>
+    </div>
+
+    <div class="service-cart">
+      <img src="{% static 'img/icons/watch-time-and-date.png' %}" alt="" />
+      <h4 class="serv-label">The Fastest</h4>
+      <p class="serv-desc">
+        your securety and prevacey in our place and dont scary
+      </p>
+      <button class="l-more">learn more</button>
+    </div>
+  </section>
+  <!-- ./service-cart -->
+</div>
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %} {% endblock %}
+
+<!------ End-Scripts ------>

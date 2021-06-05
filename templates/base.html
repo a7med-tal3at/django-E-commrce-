@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Space</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    />
+    {% block styles %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'themify-icons/themify-icons.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/product_window.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="big-lay"></div>
+    <div class="side-bar">
+      <div class="center-i">
+        <i class="ti-close"></i>
+      </div>
+      <div class="products">
+        <div class="empty">
+          <h2>no products yet</h2>
+        </div>
+      </div>
+      <button class="more">go to checkouts</button>
+    </div>
+
+    {% include 'partials/header.html' %}
+    <!-- 
+      ============================
+    -->
+    {% block content %} {% endblock %}
+    <!-- 
+      ============================
+    -->
+    {% include 'partials/footer.html' %}
+    <!-- 
+      ============================
+    -->
+    {% block scripts %} {% endblock %}
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

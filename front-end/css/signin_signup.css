@@ -1,0 +1,126 @@
+.parent {
+  display: flex;
+  margin: 100px 0;
+}
+
+.parent .login {
+  flex: 1;
+  text-align: center;
+}
+
+.parent .login h1 {
+  text-transform: capitalize;
+  text-align: left;
+  color: #890620;
+  width: 80%;
+  margin: auto;
+}
+
+.parent .login img {
+  width: 90px;
+  height: 90px;
+}
+
+.parent .login input[type="text"],
+.parent .login input[type="password"] {
+  width: 80%;
+  padding: 15px;
+  margin: 10px auto;
+  border: 2px solid #890620;
+  color: #890620;
+  font-size: 18px;
+}
+
+.parent .login input:not([type="checkbox"])::placeholder {
+  text-transform: capitalize;
+}
+
+.parent .login .rem {
+  width: 80%;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.parent .login .rem input[type="checkbox"]:checked {
+  background-color: #890620;
+}
+
+.parent .login .btn {
+  border: 1px solid #890620;
+  background: none;
+  color: #890620;
+  padding: 10px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.parent .login a.btn {
+  text-decoration: none;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.btn-container {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parent .login .btn:hover {
+  background-color: #890620;
+  color: #fff;
+}
+
+.parent .img {
+  flex: 1;
+  width: 50%;
+}
+
+.parent .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.top-row {
+  width: 80%;
+  margin: auto;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-row h1 {
+  flex: 1;
+}
+
+.top-row a {
+  flex: 1;
+}
+
+.gen {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+
+.gen h3 {
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.gen label {
+  text-transform: capitalize;
+}
+
+.gen label:last-of-type {
+  margin-left: 10px;
+}
+.gen input[type="radio"]:last-of-type {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,104 @@
+.profile {
+  margin: 20px 0;
+}
+
+.profile .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-img {
+  position: relative;
+  flex: 1;
+  /* border: 1px solid #000; */
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+  border-radius: 10px;
+}
+
+.profile-img .wellp {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.profile-img .personal {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: rgba(149, 157, 165, 0.9) 0px 8px 24px;
+}
+
+.profile-img .personal img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile-img .name {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.profile-img .bio {
+  width: 200px;
+  color: #656565;
+  text-align: center;
+  margin: 10px auto;
+  line-height: 25px;
+}
+
+.profile-info {
+  padding: 10px;
+}
+
+.profile-info ul {
+  list-style: none;
+}
+
+.profile-info ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.profile-info ul li label {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.profile-info ul li span {
+  color: #890620;
+  font-weight: bold;
+}
+
+.profile-info ul li p {
+  color: #656565;
+  text-transform: capitalize;
+}
+
+.profile-img .edit {
+  display: block;
+  border: 1.5px solid #890620;
+  border-radius: 5px;
+  padding: 10px;
+  background: none;
+  width: 80%;
+  margin: 20px auto;
+  font-weight: bold;
+  color: #890620;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+}
+
+.profile-img .edit:hover {
+  background-color: #890620;
+  color: #fff;
+}

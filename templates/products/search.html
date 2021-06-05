@@ -1,0 +1,148 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loding Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+<link rel="stylesheet" href="{% static 'css/product.css' %}" />
+<link rel="stylesheet" href="{% static 'css/team.css' %}" />
+<link rel="stylesheet" href="{% static 'css/search.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+<section class="search-sec">
+  <form action="">
+    <h1>search-result {{q}}</h1>
+    <input type="text" name="q" value="{{q}}" id="" placeholder="Search here" />
+    <button type="submit"><i class="ti-search"></i></button>
+  </form>
+  <section class="ser-res">
+    <div class="container">
+      <div class="helpper">
+        <div class="window">
+          <div class="container">
+            <div class="imgs">
+              <img
+                class="active"
+                src="{% static 'img/product/product-1.jpeg' %}"
+                alt=""
+              />
+              <img src="{% static 'img/product/product-1.jpeg' %}" alt="" />
+              <img src="{% static 'img/product/product-1.jpeg' %}" alt="" />
+            </div>
+
+            <div class="slider">
+              <img src="{% static 'img/product/images.jpeg' %}" alt="" />
+              <div class="polits">
+                <span class="active polit"></span>
+                <span class="polit"></span>
+                <span class="polit"></span>
+              </div>
+            </div>
+
+            <div class="content">
+              <h3 class="title prod-name">hand watch</h3>
+              <p class="prod-desc">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit,
+                eveniet?
+              </p>
+              <h3 class="title prod-colors">colors</h3>
+              <div class="colors">
+                <div class="cir a" color="#fff"></div>
+                <div class="cir b" color="#fff"></div>
+                <div class="cir c" color="#fff"></div>
+                <div class="cir d" color="#fff"></div>
+              </div>
+              <h2 class="title qty">qountity</h2>
+              <div class="controler">
+                <button id="plus">+</button>
+                <input type="text" value="1" />
+                <button id="minuse">-</button>
+              </div>
+              <button class="add-to-cart">add to cart</button>
+            </div>
+          </div>
+          <div class="close">
+            <div class="icon">
+              <i class="ti-close"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-parent">
+        {% for p in products %}
+
+        <div class="production">
+          <div class="cart">
+            <img src="{{p.img.url}}" alt="" />
+            <h3 class="name">{{p.prodName}}</h3>
+            <div class="pad-container">
+              <p class="prd-desc">{{p.prodDiscrption}}</p>
+              <div class="prod-bes">
+                <h2 class="price">${{p.prodPrice}}</h2>
+                <span class="offer">{{p.prodDescound}}% OFF</span>
+              </div>
+              <!-- ./prod-bes -->
+              <div class="ratting">
+                <div class="stars">
+                  <span data-set="{{p.prodRate}}"></span>
+                </div>
+                <!-- ./stars -->
+                <button class="view">
+                  <i class="ti-heart"></i>
+                  view
+                </button>
+              </div>
+              <!-- ./ratting -->
+            </div>
+            <!-- ./pad-conatiner -->
+          </div>
+          <!-- ./cart -->
+        </div>
+
+        {% endfor %}
+      </div>
+      <!-- flex-parent -->
+    </div>
+  </section>
+</section>
+<div class="pagination">
+  <ul>
+    <li class="control"><</li>
+    <li class="li-active">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li class="control">></li>
+  </ul>
+</div>
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %}
+
+<script src="{% static 'js/product_window.js' %}"></script>
+<script src="{% static 'js/ratting.js' %}"></script>
+
+{% endblock %}
+
+<!------ End-Scripts ------>

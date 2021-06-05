@@ -1,0 +1,114 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loding Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/edit_profile.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+<section class="edit-profile">
+  <div class="user-cur-imgs">
+    <div class="wellp">
+      <div class="btn-change">
+        <label for="in">
+          <i class="ti-image"></i>
+        </label>
+        <input type="file" id="in" />
+      </div>
+      <img src="{% static 'img/gallery/693150.jpg' %}" alt="" />
+    </div>
+    <div class="personal">
+      <img src="{% static 'img/gallery/cat-1.jpeg' %}" alt="" />
+    </div>
+  </div>
+
+  <div class="text-content">
+    <h3 class="name">ahmed t.mamdouh</h3>
+    <p class="bio">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+    </p>
+  </div>
+
+  <form action="{% url 'edit_profile' %}">
+    <div class="user-cur-info">
+      <div class="public">
+        <h2 class="title">public</h2>
+        <div class="inputs">
+          <h3>name</h3>
+          <input type="text" name="user" value="ahmed t.mamdouh" />
+
+          <h3>bio</h3>
+          <input
+            type="text"
+            name="bio"
+            id="bio"
+            value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti"
+          />
+        </div>
+      </div>
+
+      <div class="contact">
+        <h2 class="title">contact</h2>
+        <div class="inputs">
+          <h3>email</h3>
+          <input type="email" name="email" value="user101@site.com" />
+
+          <h3>phone</h3>
+          <input type="text" name="phone" value="+201151307447" />
+        </div>
+      </div>
+
+      <div class="authentication">
+        <h2 class="title">authentication</h2>
+        <div class="inputs">
+          <h3>current password</h3>
+          <input
+            type="password"
+            name="pass"
+            placeholder="enter your password"
+          />
+
+          <h3>new password</h3>
+          <input
+            type="password"
+            name="new-pass"
+            placeholder="enter your new password"
+          />
+
+          <h3>re-new password</h3>
+          <input
+            type="password"
+            name="re-pass"
+            placeholder="enter your new password agin"
+          />
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="save-ch">seve changes</button>
+  </form>
+</section>
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %} {% endblock %}
+
+<!------ End-Scripts ------>

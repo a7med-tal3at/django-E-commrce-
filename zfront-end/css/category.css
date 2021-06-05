@@ -1,0 +1,75 @@
+.category-header {
+  height: 80vh;
+  background-image: url(../img/gallery/693150.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.category-description {
+  color: #fff;
+  width: 80%;
+  height: 100%;
+  background-image: linear-gradient(to right, #890620, rgba(255, 255, 255, 0));
+  display: flex;
+  align-items: center;
+}
+
+.category-description p {
+  padding-left: 5px;
+}
+
+.category-description h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+.category-description .desk-markting {
+  width: 50%;
+  line-height: 30px;
+}
+
+.category-sec .container .flex-parent {
+  padding: 80px 0;
+}
+
+.pagination {
+  width: 40%;
+  margin: 30px auto 50px;
+}
+
+.pagination ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination ul .control {
+  border: 1px solid #2264d1;
+  color: #2264d1;
+}
+
+.pagination ul li {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px;
+  color: #890620;
+
+  cursor: pointer;
+}
+
+.pagination ul li:not(.control):hover {
+  font-weight: bold;
+  border: 1px solid #890620;
+}
+
+.li-active {
+  font-weight: bold;
+  border: 1px solid #890620;
+}
+
+.team {
+  margin-top: 70px !important;
+}

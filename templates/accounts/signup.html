@@ -1,0 +1,78 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loding Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/signin_signup.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+<div class="parent">
+  <div class="img">
+    <img src="{% static 'img/ill/signup.svg' %}" alt="" />
+  </div>
+  <div class="login">
+    <div class="top-row">
+      <h1>sign up</h1>
+      <a href="{% url 'signin' %}">i am already members</a>
+    </div>
+    <form action="{% url 'signup' %}">
+      <input type="text" name="fname" placeholder="enter first name" />
+      <input type="text" name="lname" placeholder="enter last name" />
+      <input type="text" name="phone" placeholder="enter phone" />
+      <input type="text" name="email" placeholder="enter your email" />
+      <input
+        type="password"
+        name="pass"
+        id=""
+        placeholder="enter your password"
+      />
+
+      <input
+        type="password"
+        name="re-pass"
+        id=""
+        placeholder="re-enter your password"
+      />
+      <div class="gen">
+        <h3>gender</h3>
+
+        <label for="ch">mail</label>
+        <input type="radio" name="a" id="" />
+
+        <label for="ch">femail</label>
+        <input type="radio" name="a" id="" />
+
+        <button class="btn">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %}
+
+<script src="{% static 'js/signup.js' %}"></script>
+
+{% endblock %}
+
+<!------ End-Scripts ------>

@@ -1,0 +1,68 @@
+<!-- Base File -->
+
+{% extends 'base.html' %}
+
+<!-- Loding Static -->
+
+{% load static %}
+
+<!------ Styles ------>
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/signin_signup.css' %}" />
+
+{% endblock %}
+
+<!------ End-Styles ------>
+
+<!------ Content ------>
+
+{% block content %}
+
+<div class="gap"></div>
+<div class="parent">
+  <div class="img">
+    <img src="{% static 'img/ill/login.svg' %}" alt="" />
+  </div>
+  <div class="login">
+    <h1>sign in</h1>
+    <img src="{% static 'img/ill/hero.png' %}" alt="" />
+    <form action="{% url 'signin' %}">
+      <input
+        type="text"
+        name="user"
+        placeholder="enter your email or username"
+      />
+      <input
+        type="password"
+        name="pass"
+        id=""
+        placeholder="enter your password"
+      />
+
+      <div class="rem">
+        <label for="ch">Remmber me </label>
+        <input type="checkbox" name="" id="ch" />
+        <div class="btn-container">
+          <button class="btn send">login</button>
+          <a class="btn" href="{% url 'signup' %}">create an account</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+<!------ End-Content ------>
+
+<!------ Scripts ------>
+
+{% block scripts %}
+
+<script src="{% static 'js/signin.js' %}"></script>
+
+{% endblock %}
+
+<!------ End-Scripts ------>
